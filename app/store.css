@@ -1,0 +1,80 @@
+
+
+#store-return{
+}
+
+#store-div{
+    width: 57%;
+    float: left;
+    height: 80vh;
+    margin-right: 3%;
+}
+
+#centered-store-div{
+    width: 100%;
+    height: 100%;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    border: 0px solid black;
+}
+
+#store-info-div{
+    width: 70%;
+    height: 600px;
+
+    border: 0px solid black;
+    border-radius: 15px;
+
+    /* Candara, Inter */
+    font-family: 'Inter';
+}
+
+
+#image-div{
+    margin-top: 50px;
+    height: 60%;
+    width: 90%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 40px;
+    border: 10px solid #fdb79e;
+
+    /* background-image: url("app/images/203coffee.jpeg"); */
+}
+
+
+
+#map-div{
+    float: right;
+
+    width: 40%;
+    height: 80vh;
+
+}
+
+
+#centered-map-div{
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+    
+
+#map-embed{
+    width: 70%;
+    height: 450px;
+
+    border: 10px solid #fdb79e;
+    border-radius: 40px;
+
+}
