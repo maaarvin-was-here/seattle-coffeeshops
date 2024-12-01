@@ -30,7 +30,7 @@ export default function Store() {
     const API_KEY = '';
     const mapLink = store.mapLink + API_KEY;
 
-    const imageLink = '../../images/' + store.imageLink;
+    const imageLink = '../images/' + store.imageLink;
     var imageStyle = {
         backgroundImage: "url(" + imageLink + ")"
     };
