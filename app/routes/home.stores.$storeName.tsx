@@ -34,6 +34,7 @@ export default function Store() {
             const apiJson = await apiResponse.json();
             let k = apiJson.message;        
             setKey(k);
+            console.log("key set " + k);
         }
         getKey();
     }, [])
