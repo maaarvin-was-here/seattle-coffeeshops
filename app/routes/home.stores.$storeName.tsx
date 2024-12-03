@@ -3,6 +3,8 @@ import { Form, useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";
 import type { LoaderFunctionArgs } from "@remix-run/node";
 
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
+
 import invariant from "tiny-invariant";
 
 // import 'app/images/203coffee.jpeg';
@@ -22,18 +24,34 @@ export const loader = async ({
     return json({ store });
 };
 
+const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+
+    const value = process.env.GMAPS_API_KEY;
+    
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: `Value of MY_IMPORTANT_VARIABLE is ${value}.`}),
+        };  
+    };
+
+export { handler };
+
 export default function Store() {
     const { store } = useLoaderData<typeof loader>();
 
-    const API_KEY = process.env.GMAP_API_KEY;
-    console.log(API_KEY);
+    const key = process.env.GMAP_API_KEY;
+    console.log(key);
+
+    console.log("handler");
+    console.log(handler);
 
     var notes = store.notes;
     if (notes === undefined){
         notes = [];
     }
     // console.log("loading store " + store.name);
-    const mapLink = store.mapLink + API_KEY;
+    const mapLink = store.mapLink + key;
+    console.log(key);
 
     // let imageLink = '../images/' + store.imageLink;
     let imageLink = '../../images/' + store.imageLink;
