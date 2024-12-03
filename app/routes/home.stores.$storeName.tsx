@@ -5,6 +5,8 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 
 import invariant from "tiny-invariant";
 
+// import 'app/images/203coffee.jpeg';
+
 import "app/store.css";
 
 import { getContact } from "../data";
@@ -22,15 +24,18 @@ export const loader = async ({
 
 export default function Store() {
     const { store } = useLoaderData<typeof loader>();
+
+
     var notes = store.notes;
     if (notes === undefined){
         notes = [];
     }
-    console.log("loading store " + store.name);
+    // console.log("loading store " + store.name);
     const API_KEY = '';
     const mapLink = store.mapLink + API_KEY;
 
-    const imageLink = '../images/' + store.imageLink;
+    // let imageLink = '../images/' + store.imageLink;
+    let imageLink = '../../images/' + store.imageLink;
     var imageStyle = {
         backgroundImage: "url(" + imageLink + ")"
     };
