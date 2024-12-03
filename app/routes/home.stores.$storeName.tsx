@@ -25,13 +25,14 @@ export const loader = async ({
 export default function Store() {
     const { store } = useLoaderData<typeof loader>();
 
+    const API_KEY = process.env.GMAP_API_KEY;
+    console.log(API_KEY);
 
     var notes = store.notes;
     if (notes === undefined){
         notes = [];
     }
     // console.log("loading store " + store.name);
-    const API_KEY = '';
     const mapLink = store.mapLink + API_KEY;
 
     // let imageLink = '../images/' + store.imageLink;
