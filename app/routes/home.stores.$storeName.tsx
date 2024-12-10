@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, useLoaderData, useFetcher } from "@remix-run/react";
 import { useState, useEffect} from 'react';
 import type { FunctionComponent } from "react";
 import type { LoaderFunctionArgs } from "@remix-run/node";
@@ -34,7 +34,6 @@ export default function Store() {
             const apiJson = await apiResponse.json();
             let k = apiJson.message;        
             setKey(k);
-            console.log("key set " + k);
         }
         getKey();
     }, [])
@@ -45,10 +44,9 @@ export default function Store() {
     }
     // console.log("loading store " + store.name);
     const mapLink = store.mapLink + key;
-    console.log("mapLink " + mapLink);
-    //console.log(key);
+    // console.log("mapLink " + mapLink);
+    // console.log(key);
 
-    // let imageLink = '../images/' + store.imageLink;
     let imageLink = '../../images/' + store.imageLink;
     var imageStyle = {
         backgroundImage: "url(" + imageLink + ")"
