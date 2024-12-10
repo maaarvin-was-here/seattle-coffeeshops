@@ -20,14 +20,14 @@ import type {
   LoaderFunctionArgs
 } from "@remix-run/node";
 
-import appStylesHref from "./app.css?url";
+//import appStylesHref from "./app.css?url";
 
 import { getContacts } from "app/data.ts";
 
 
-export const links:LinksFunction = () => [
-  { rel: "stylesheet", href: appStylesHref },
-];
+//export const links:LinksFunction = () => [
+//  { rel: "stylesheet", href: appStylesHref },
+//];
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
