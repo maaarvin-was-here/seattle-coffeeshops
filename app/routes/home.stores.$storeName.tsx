@@ -32,13 +32,11 @@ export default function Store() {
         async function getKey(){
             const apiResponse = await fetch('/.netlify/functions/map-api');
             const apiJson = await apiResponse.json();
-            let k = apiJson.message;        
+            let k = apiJson.message;
             setKey(k);
         }
         getKey();
     }, [])
-
-    console.log("key " + key);
 
     var notes = store.notes;
     if (notes === undefined){
