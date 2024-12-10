@@ -36,7 +36,7 @@ module.exports = {
       ],
       settings: {
         react: {
-          version: "detect",
+          version: "^18.3.0-canary-593ecee66-20231114",
         },
         formComponents: ["Form"],
         linkComponents: [
