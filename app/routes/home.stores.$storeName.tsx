@@ -38,6 +38,8 @@ export default function Store() {
         getKey();
     }, [])
 
+    console.log("key " + key);
+
     var notes = store.notes;
     if (notes === undefined){
         notes = [];
