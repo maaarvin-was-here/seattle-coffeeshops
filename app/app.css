@@ -9,6 +9,8 @@ body{
 
   background-color: #ffe8d6;
 
+  overflow-y: hidden;
+
 
 }
 
@@ -18,7 +20,7 @@ body{
 
 #title{
     margin: 0;
-    margin-top: 30px;
+    margin-top: 5vh;
 }
 
 #title-div{
@@ -32,7 +34,9 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: 1000px;
     height: 15vh;
+    min-height: 120px;
 
     user-select: none;
     -moz-user-select: none;
@@ -40,6 +44,10 @@ body{
 
 #main-content{
     display: flex;
+    flex-shrink: 0;
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /*  SIDEBAR */
@@ -62,7 +70,8 @@ body{
 
 #sidebar{
     width: 18vw;
-    height: 80vh;
+    min-width: 200px;
+    height: 78vh;
     border-right: 0px solid black;
     display: flex;
     flex-direction: column;
@@ -122,9 +131,30 @@ body{
     background: #ffe8d6;
 }
 
+
 #detail{
     width: 100%;
     flex:1;
+}
+
+#detail-top{
+    height: 70vh
+}
+
+#detail-bottom{
+    height: 9vh;
+    display: flex;
+    align-items: bottom;
+    justify-content: right;
+}
+
+#signature{
+    align-self: flex-end;
+
+    margin-right: 2vw;
+    margin-bottom: 1vh;
+
+    font-family: trebuchet MS;
 }
 
 /*      scrollbar       */

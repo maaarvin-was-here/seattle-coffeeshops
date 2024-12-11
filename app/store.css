@@ -1,20 +1,27 @@
 
-
+#store-return{
+    display: flex;
+}
 
 #store-div{
-    width: 57%;
+    flex: 1 0 57%;
     float: left;
-    height: 80vh;
     margin-right: 3%;
+
+    display: flex;
+
+    border: 0px solid black
+
 }
 
 #centered-store-div{
     width: 100%;
+    min-width: 600px;
     height: 100%;
 
     
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: right;
 
     border: 0px solid black;
@@ -22,7 +29,7 @@
 
 #store-info-div{
     width: 70%;
-    height: 600px;
+    height: 100%;
 
     border: 0px solid black;
     border-radius: 15px;
@@ -39,6 +46,7 @@
 
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
 
     border-radius: 40px;
     border: 10px solid #fdb79e;
@@ -51,26 +59,35 @@
 #map-div{
     float: right;
 
-    width: 40%;
-    height: 80vh;
+    flex: 1 0 40%;
+    height: 70vh;
+
+    display: flex;
+
+    border: 0px solid black;
 
 }
 
 
 #centered-map-div{
     width: 100%;
-    height: 100%;
+    height: 95%;
+
+    margin-top: 10vh;
 
 
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: left;
 }
     
 
 #map-embed{
     width: 70%;
-    height: 450px;
+    min-width: 300px;
+
+    height: 70%;
+    min-height: 300px;
 
     border: 10px solid #fdb79e;
     border-radius: 40px;

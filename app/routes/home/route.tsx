@@ -153,13 +153,20 @@ export default function App() {
           </div>
         </div>
         <div id="detail">
-          {(location.pathname == '/home')?
-          <div id="background-home-image-holder">
-            <div id="background-home-image">
-            
+          <div id="detail-top">
+            {(location.pathname == '/home')?
+            <div id="background-home-image-holder">
+              <div id="background-home-image">
+              
+              </div>
+            </div>
+            :<Outlet />}
+          </div>
+          <div id="detail-bottom">
+            <div id="signature">
+              &#9829; made with caffeine, for caffeine
             </div>
           </div>
-          :<Outlet />}
         </div>
       </div>
       <ScrollRestoration />
