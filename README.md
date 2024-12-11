@@ -4,7 +4,7 @@ a list of study spots I enjoy in Seattle and also a side quest to learn React + 
 
 
 
-# Feature backlog
+### Feature backlog
 * Fix background home image resizing (scale by height not width + min-width)
 * Add mobile compatibility via media queries
 * Add yelp links?
